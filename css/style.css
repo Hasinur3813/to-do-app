@@ -285,8 +285,8 @@ body{
         font-size:20px;
         width:35px;
         height: 35px;
-        padding-top:3px;
-        top:46px;
+        padding-top:4px;
+        top:45px;
     }
     .home-page h1 {
         font-size: 32px;
@@ -357,8 +357,8 @@ body{
         font-size:20px;
         width:35px;
         height: 35px;
-        padding-top:3px;
-        top:46px;
+        padding-top:4px;
+        top:45px;
     }
     .complete_page h1::after {
         width: 100px;
@@ -397,8 +397,8 @@ body{
         font-size:20px;
         width:35px;
         height: 35px;
-        padding-top:3px;
-        top:46px;
+        padding-top:4px;
+        top:45px;
     }
 
 }
