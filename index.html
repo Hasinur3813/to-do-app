@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do-app</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+</head>
+<body>
+    <div class="main-box">
+        <div class="app-box">
+            <div class="home-page" id="home-page">
+                <img src="img/home2.png" alt="image">
+                <h1>Welcome to <span style="color:#0984e3;">Go task</span></h1>
+                <p>Store your daily task here and get reminder to do the work immediately.</p>
+
+                <a href="#" id="start-btn">Let's Start</a>
+            </div>
+
+            <div class="task-page d-none" id="task-page">
+
+                <h1><span class="count">0</span>Your task</h1>
+                <div class="task">
+                   
+                </div>
+                <div class="icon">
+                    <div class="icon-list">
+                        <i class="fa-solid fa-house"></i>
+                        <i class="fa-solid fa-plus"></i>
+                        <i class="fa-solid fa-list-check"></i>
+                    </div>
+                </div>
+
+                <div class="add-task">
+                   <h2>Add your task</h2>
+                   <input id="taskInput" type="text" placeholder="Enter task name">
+                   <div class="btn">
+                       <button id="cancel">Cancel</button>
+                       <button id="add">Add</button>
+                   </div>
+                </div>
+
+                <p class="addingPopup"></p>
+            </div>
+
+            <div class="complete_page d-none">
+                <h1>Task completed</h1>
+                <div class="task" id="done_list">
+            
+                </div>
+
+                <p class="addingPopup"></p>
+                <div class="icon">
+                    <div class="icon-list">
+                        <i class="fa-solid fa-house d-home"></i>
+                        <i class="fa-solid fa-plus done"></i>
+                        <i class="fa-solid fa-list-check"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/main.js"></script>
+</body>
+</html>

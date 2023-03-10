@@ -1,0 +1,407 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: segoe ui;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)) , url(../img/bg.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.main-box, .home-page, .task-page, .complete_page{
+    width:250px;
+    height: 480px;
+}
+
+
+.main-box{
+    box-shadow: 0 0 10px rgb(219, 219, 219);
+    border-radius: 30px;
+
+}
+.home-page{
+    background-image:linear-gradient(to bottom, #00cec9,#fff );
+    border-radius: 30px;
+    text-align: center;
+    transition:0.3s;
+}
+.home-page img{
+    width:100%;
+}
+.home-page h1 {
+	font-size: 22px;
+}
+
+.home-page h2{
+    margin-top:20px;
+}
+
+.home-page p {
+	font-size: 13px;
+	font-weight: 500;
+	width: 90%;
+	margin: 15px auto 0;
+}
+.home-page a {
+	display: inline-block;
+	text-decoration: none;
+	margin-top: 98px;
+	background: #0984e3;
+	padding: 8px 55px;
+	border-radius: 10px;
+	color: #fff;
+	font-size: 17px;
+	letter-spacing: 0.13rem;
+	transition: 0.3s ease-out;
+}
+.home-page a:hover{
+    background:#096cb8;
+}
+
+.task-page{
+    background-image: linear-gradient(to top,#096cb87b,#fff );
+    border-radius: 30px;
+    position: relative;
+    transition:0.3s;
+}
+.task-page h1, .complete_page h1 {
+	text-align: center;
+	padding-top: 45px;
+	position: relative;
+	margin-bottom: 40px;
+	font-size: 22px;
+}
+.task-page h1::after, .complete_page h1::after {
+	position: absolute;
+	content: '';
+	width: 45px;
+	height: 3px;
+	background: #0984e3;
+	left: 109px;
+	bottom: -8px;
+}
+.task-page h1 .count {
+	position: absolute;
+	right: 27px;
+	color: #0b6ab3;
+	background: #00cec9;
+	border-radius: 50%;
+	width: 25px;
+	height: 25px;
+	text-align: center;
+	padding-top: 2px;
+	font-weight: 500;
+	font-size: 15px;
+	top: 49px;
+}
+.task {
+	max-height: 270px;
+	padding: 10px;
+	overflow: auto;
+	box-shadow: 0 0 2px #00cec9;
+	border-radius: 10px;
+	scrollbar-width: thin;
+}
+.task p input {
+	width: 16px;
+	height: 16px;
+	margin-right: 20px;
+	color: green;
+}
+.task p {
+	font-size: 16px;
+	border-bottom: 2px solid #00cec9;
+	margin-bottom: 15px;
+	padding: 12px 10px;
+	overflow: hidden;
+	line-height: 8px;
+}
+.task h3 {
+	font-size: 16px;
+}
+
+.addingPopup {
+	position: absolute;
+	bottom: 98px;
+	left: 90px;
+	font-size: 15px;
+	color: #096cb8;
+	font-weight: 600;
+	transition: 0.3s;
+	transform: translateX(-106px);
+}
+
+.icon {
+	width: 100%;
+	height: 50px;
+	background: #00cec9;
+	position: absolute;
+	bottom: 0;
+	border-bottom-left-radius: 30px;
+	border-bottom-right-radius: 30px;
+	text-align: center;
+	box-shadow: 2px 0 5px #fff;
+}
+
+.icon-list i {
+	font-size: 16px;
+	color: #fff;
+	transition: 0.3s;
+	cursor: pointer;
+}
+.icon-list i:hover{
+    color:#0984e3;
+}
+.icon-list i:nth-child(2) {
+	margin: 0 20px;
+	transform: translateY(-25px);
+	background: #00cec9;
+	padding: 15px;
+	border-radius: 50%;
+	box-shadow: inset 0 0 3px #fff;
+}
+.icon-list i:nth-child(2):hover{
+    background: #0984e3;
+    color:#fff;
+}
+.d-none{
+    display:none;
+    transition:0.3s;
+}
+.d-block{
+    display: block;
+    transition:0.3s;
+}
+
+.add-task {
+	width: 237px;
+	height: 177px;
+	margin: auto;
+	border-radius: 10px;
+	box-shadow: inset 0 0 5px #77a6a5;
+	background: #fff;
+	text-align: center;
+	transition: 0.3s ease-out;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+}
+.add-task h2 {
+	text-align: center;
+	padding: 10px;
+	font-size: 21px;
+}
+
+.add-task input {
+	margin-top: 11px;
+	border: none;
+	border-radius: 10px;
+	box-shadow: inset 0 0 4px #00cec9;
+	padding: 10px 10px;
+	width: 88%;
+	outline: none;
+	color: #096cb8;
+	font-size: 14px;
+	font-weight: 600;
+	margin-bottom: 35px;
+}
+.add-task button {
+	padding: 6px 0px;
+	border: none;
+	outline: none;
+	border-radius: 6px;
+	font-size: 13px;
+	font-weight: 600;
+	color: #00cec9;
+	width: 59px;
+}
+.add-task button:nth-child(2) {
+	margin-left: 79px;
+}
+
+.pop-up-hidden {
+	transform: translate(-120px, 120px) scale(0);
+}
+
+.complete_page{
+    border-radius: 30px;
+    position: relative;
+    transition:0.3s;
+    background-image: linear-gradient(to bottom, #81ecec,#fff);
+}
+
+.complete_page h1{
+    color:#0984e3;
+}
+
+.complete_page #done_list p{
+    position: relative;
+    color:green;
+}
+.complete_page #done_list p button {
+	width: 22px;
+	height: 22px;
+	background: #a80606;
+	border: none;
+	outline: none;
+	float: right;
+	font-size: 15px;
+	color: #fff;
+	font-weight: 600;
+	border-radius: 3px;
+	box-shadow: inset 0 0 3px #000;
+	transition: 0.3s;
+	cursor: pointer;
+	position: absolute;
+	right: 0;
+	top: 0px;
+}
+.complete_page #done_list p button:hover{
+    background:#fb0000;
+}
+
+
+
+@media only screen and (max-width:400px){
+    .main-box, 
+    .home-page, 
+    .task-page, 
+    .complete_page {
+        width: 340px;
+        height: 700px;
+    }
+    .task-page h1::after, .complete_page h1::after {
+        left: 134px;
+    }
+    .task-page h1 .count {
+        right: 32px;
+        font-size:20px;
+        width:35px;
+        height: 35px;
+        padding-top:3px;
+    }
+    .home-page h1 {
+        font-size: 32px;
+    }
+    .home-page p {
+        font-size: 18px;
+    }
+    .home-page a {
+        margin-top: 160px;
+        padding: 10px 90px;
+        font-size: 22px;
+    }
+    .task-page h1, .complete_page h1 {
+        font-size:25px;
+    }
+    .add-task h2 {
+        font-size: 25px;
+        margin-top: 10px;
+    }
+    .add-task{
+        width:320px;
+    }
+    #emptyList{
+        font-size:20px !important;
+    }
+    .icon {
+        height: 68px;
+    }
+    .icon-list i {
+        font-size: 25px;
+    }
+    .icon-list i:nth-child(2) {
+        margin: 0 42px;
+    }
+    .add-task {
+        height: 230px;
+    }
+    .add-task input {
+        padding: 16px 10px;
+        font-size: 17px;
+    }
+    .add-task button {
+        padding: 8px 0px;
+        font-size: 20px;
+        width: 95px;
+    }
+    .task-page h1::after, .complete_page h1::after {
+        left: 148px;
+    }
+    .addingPopup {
+        font-size: 18px;
+        left:120px;
+    }
+}
+@media only screen and (max-width:350px){
+    .main-box, 
+    .home-page, 
+    .task-page, 
+    .complete_page {
+        width: 318px;
+        height: 700px;
+    }
+    .home-page a {
+        margin-top: 170px;
+    }
+    .task-page h1 .count {
+        right: 32px;
+        font-size:20px;
+        width:35px;
+        height: 35px;
+        padding-top:3px;
+    }
+    .complete_page h1::after {
+        width: 100px;
+        left: 110px;
+   
+    }
+    .home-page a {
+        font-size: 22px;
+    }
+    .add-task {
+        width: 305px;
+    }
+    .add-task button:nth-child(2) {
+        margin-left: 76px;
+    }
+    .task-page h1 .count {
+        right: 32px;
+        font-size:20px;
+        width:35px;
+        height: 35px;
+        padding-top:3px;
+    }
+}
+
+@media only screen and (max-width:317px){
+    .main-box, 
+    .home-page, 
+    .task-page, 
+    .complete_page {
+        width: 300px;
+        height: 700px;
+    }
+    .home-page a {
+        font-size: 17px;
+        margin-top: 195px;
+    }
+    .home-page h1 {
+        font-size: 31px;
+    }
+    .task-page h1 .count {
+        right: 32px;
+        font-size:20px;
+        width:35px;
+        height: 35px;
+        padding-top:3px;
+    }
+
+}
