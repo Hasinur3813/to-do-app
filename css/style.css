@@ -286,6 +286,7 @@ body{
         width:35px;
         height: 35px;
         padding-top:3px;
+        top:46px;
     }
     .home-page h1 {
         font-size: 32px;
@@ -357,6 +358,7 @@ body{
         width:35px;
         height: 35px;
         padding-top:3px;
+        top:46px;
     }
     .complete_page h1::after {
         width: 100px;
@@ -372,13 +374,7 @@ body{
     .add-task button:nth-child(2) {
         margin-left: 76px;
     }
-    .task-page h1 .count {
-        right: 32px;
-        font-size:20px;
-        width:35px;
-        height: 35px;
-        padding-top:3px;
-    }
+  
 }
 
 @media only screen and (max-width:317px){
@@ -402,6 +398,7 @@ body{
         width:35px;
         height: 35px;
         padding-top:3px;
+        top:46px;
     }
 
 }
